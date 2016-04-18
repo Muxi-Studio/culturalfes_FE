@@ -1,0 +1,14 @@
+{
+  "name": "culturalfes_fe",
+  "version": "1.0.0",
+  "description": "The front end code for culturalfes project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muxi Fe",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^2.8.0"
+  }
+}
