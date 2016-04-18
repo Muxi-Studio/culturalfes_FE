@@ -9,13 +9,24 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/courses")
+def courses():
+    with app.open_resource('mock/courses.json') as f:
+        data = f.read()
+        json_dict = json.loads(data)
+        info = json_dict['info']
+        hot_comments = json_dict['hot_comments']
+    return render_template("courses.html", info=info, hot_comments=hot_comments)
+
+
 @app.route("/movies/")
 def movies():
     with app.open_resource('mock/movies.json') as f:
         data = f.read()
         json_dict = json.loads(data)
         info = json_dict['info']
-    return render_template("movies.html", info=info)
+
+    return render_template("movies.html", info=info, hot_comments=hot_comments)
 
 
 @app.route("/animes/")
@@ -43,15 +54,6 @@ def articles():
         json_dict = json.loads(data)
         info = json_dict['info']
     return render_template("articles.html", info=info)
-
-
-@app.route("/courses")
-def courses():
-    with app.open_resource('mock/courses.json') as f:
-        data = f.read()
-        json_dict = json.loads(data)
-        info = json_dict['info']
-    return render_template("courses.html", info=info)
 
 
 @app.route("/photo/<int:id>/")

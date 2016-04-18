@@ -6,5 +6,13 @@
                 <p>{{ info[key] }}</p>
             </li>
         {% endfor %}
+        {% for i in hot_comments %}
+            {% for n in i %}
+            <li>
+                <p>{{ n }}</p>
+                <p>{{ i[n] }}</p>
+            </li>
+            {% endfor %}
+        {% endfor %}
     </body>
 </html>
