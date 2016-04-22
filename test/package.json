@@ -4,11 +4,16 @@
   "description": "The front end code for culturalfes project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp scss",
+    "watch": "gulp watch"
   },
   "author": "Muxi Fe",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^2.8.0"
+    "eslint": "^2.8.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-watch": "^4.3.5"
   }
 }
