@@ -6,7 +6,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    with app.open_resource('mock/courses.json') as f:
+        data = f.read()
+        json_dict = json.loads(data)
+        info = json_dict['info']
+        hot_comments = json_dict['hot_comments']
+    return render_template("index.html", info=info, hot_comments=hot_comments)
 
 
 @app.route("/courses")
