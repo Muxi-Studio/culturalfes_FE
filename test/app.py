@@ -16,7 +16,7 @@ def courses():
         json_dict = json.loads(data)
         info = json_dict['info']
         hot_comments = json_dict['hot_comments']
-    return render_template("courses.html", info=info, hot_comments=hot_comments)
+    return render_template("upload.html", info=info, hot_comments=hot_comments)
 
 
 @app.route("/movies/")

@@ -1,0 +1,30 @@
+	{%extends 'base.html' %}
+	{% block page_content %}
+	<div class="upload-main">
+		<div class="upload-author">
+			<span>作    者</span>
+			<input class="upload-author-form">
+		</div>
+		<div class="upload-title">
+			<span>标    题</span>
+			<input class="upload-title-form"> 
+		</div>
+		<div class="upload-class">
+			<span>类    别</span>
+			<form action="" method="get"> 
+			<label><input name="upload-class-choice" type="radio" value="" />电影 </label> 
+			<label><input name="upload-class-choice" type="radio" value="" />网文 </label> 
+			<label><input name="upload-class-choice" type="radio" value="" />动漫 </label> 
+			<label><input name="upload-class-choice" type="radio" value="" />摄影</label> 
+			<label><input name="upload-class-choice" type="radio" value="" />微课程</label> 
+			</form> 
+		</div>
+		<div class="upload-addfile">
+			<span>添加附件</span>
+			<form action="" method="get">
+			<input  type="file" name="upload-file" class="upload-title-form">
+			</form> 
+		</div>
+		<button class="upload-submite">提交</button>
+	</div>
+	{% endblock %}
