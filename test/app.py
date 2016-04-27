@@ -12,12 +12,7 @@ def index():
         info = json_dict['info']
         hot_comments = json_dict['hot_comments']
     return render_template("index.html", info=info, hot_comments=hot_comments)
-<<<<<<< HEAD
-# something wrong!
-=======
 
-
->>>>>>> 2c19ef7ca080900ee0b2e34aee168930c76df296
 @app.route("/courses")
 def courses():
     with app.open_resource('mock/courses.json') as f:
