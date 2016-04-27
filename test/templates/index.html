@@ -1,6 +1,26 @@
-{% extends 'base.html' %}
-{% block title %}
-	<div class="index">
-		hello
+{% extends 'base.html' %} 
+{% block page_content %}
+	<div class="index_banner"></div>
+	<div class="index_notice">
+		<div class="index_notice_title">
+			<div class="index_tag tag1">通知</div>
+			<a class="index_more">更多 ></a>
+		</div>
+		<p class="index_notice_content">华中师范大学首届网络创意文化节</p>
+		<p class="index_notice_content">华中师范大学首届网络创意文化节</p>
+		<p class="index_notice_content">华中师范大学首届网络创意文化节</p>
+		<p class="index_notice_content">华中师范大学首届网络创意文化节</p>
 	</div>
-{% endblock %}
+	<div class="index_movie">
+		<div class="index_title">
+			<div class="index_tag tag2">电影</div>
+			<a class="index_more">更多 ></a>
+		</div>
+	</div>
+
+<!-- 	<div>
+	{% for i in info %}
+	<li>{{ info[i] }}</li>
+	{% endfor %}
+ -->
+ {% endblock %}

@@ -6,6 +6,15 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
 </head>
 <body>
-	{% block page_content %}{% endblock %}
+	<div class="content">
+		{% block guide %}
+			<div class="guide">
+				<div class="">
+					<button class="first_page">首页</button><button>作品上传</button><button>票数排行</button>
+				</div>
+			</div>
+		{% endblock %}
+		{% block page_content %}{% endblock %}
+	</div>
 </body>
 </html>

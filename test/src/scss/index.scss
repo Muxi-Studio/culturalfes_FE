@@ -1,3 +1,62 @@
-.index{
-	background-color:#000;
+$d_green:#207479;
+$s_green:#33c157;
+$tag_width:84px;
+$tag_height:49px;
+$big-fonts:16px;
+$big-fontc:white;
+$small-fonts:13px;
+$small-fontc:gray;
+$index_padding_s:50px;
+$index_padding_v:10px;
+.first_page{
+	background-color: $s_green;
 }
+.index_banner{
+	display: block;
+	width: 100%;
+	height: 437px;
+	background-color: #337d9e;
+}
+.index_tag{
+	width: $tag_width;
+	height: $tag_height;
+	color: $big-fontc;
+	display: inline-block;
+}
+.tag1{
+	background-color: $s_green;
+	font-size:$big-fonts;
+	text-align: center;
+	line-height: $tag_height;
+}
+.tag2{
+	background-color: $d_green;
+	font-size:$big-fonts;
+	text-align: center;
+	line-height: $tag_height;
+}
+.index_more{
+	float: right;
+	color: $small-fontc;
+	line-height: $tag_height;
+	font-size: $small-fonts;
+}
+.index_notice,.index_movie{
+	display: block;
+	height: auto;
+	overflow: hidden;
+	padding-left: $index_padding_s;
+	padding-right:$index_padding_s;
+	padding-top:$index_padding_v;
+	padding-bottom: $index_padding_v;
+	border-bottom: 1px solid silver;
+	.index_title{
+		display: block;
+	}
+	.index_notice_content{
+		display: block;
+		padding-bottom: 5px;
+		border-bottom: 1px solid silver;
+	}
+}
+
