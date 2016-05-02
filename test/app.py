@@ -9,9 +9,13 @@ def index():
     with app.open_resource('mock/courses.json') as f:
         data = f.read()
         json_dict = json.loads(data)
-        info = json_dict['info']
-        hot_comments = json_dict['hot_comments']
-    return render_template("index.html", info=info, hot_comments=hot_comments)
+        notice = json_dict['notice']
+        movie = json_dict['movie']
+        article = json_dict['article']
+        photo = json_dict['photo']
+        comic = json_dict['comic']
+        micromovie = json_dict['micromovie']
+    return render_template("index.html", notice=notice,movie=movie,article=article,photo=photo,comic=comic,micromovie=micromovie,)
 
 @app.route("/courses")
 def courses():

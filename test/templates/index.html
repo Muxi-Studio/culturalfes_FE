@@ -7,31 +7,13 @@
 			<a class="index_more">更多 ></a>
 		</div>
 		<div class="index_notice_box">
+		{% for i in notice %}
 			<div class="index_notice_content">
 				<div class="index_notice_dot"></div>
-				<a class="index_notice_time">10-12</a>
-				<p class="index_notice_line">华中师范大学首届网络创意文化节</p>
+				<a class="index_notice_time">{{ i.date }}</a>
+				<p class="index_notice_line">{{ i.title }}</p>
 			</div>
-			<div class="index_notice_content">
-				<div class="index_notice_dot"></div>
-				<a class="index_notice_time">10-12</a>
-				<p class="index_notice_line">华中师范大学首届网络创意文化节</p>
-			</div>
-			<div class="index_notice_content">
-				<div class="index_notice_dot"></div>
-				<a class="index_notice_time">10-12</a>
-				<p class="index_notice_line">华中师范大学首届网络创意文化节</p>
-			</div>
-			<div class="index_notice_content">
-				<div class="index_notice_dot"></div>
-				<a class="index_notice_time">10-12</a>
-				<p class="index_notice_line">华中师范大学首届网络创意文化节</p>
-			</div>
-			<div class="index_notice_content">
-				<div class="index_notice_dot"></div>
-				<a class="index_notice_time">10-12</a>
-				<p class="index_notice_line">华中师范大学首届网络创意文化节</p>
-			</div>
+		{% endfor %}
 		</div>
 	</div>
 	<div class="index_tu">
@@ -40,62 +22,42 @@
 			<a class="index_more">更多 ></a>
 		</div>
 		<div class="index_tu_box">
-			<div class="index_tu_content">
-				<div class="index_tu_img"><img src=""></div>
-				<div class="index_tu_info">
-					<div class="index_tu_info">
-						<p>未完待续的青春</p>
-						<a>3-22</a>
-						<a>白思家</a>
-					</div>
-				</div>
-			</div>
+			{% for i in movie %}
 			<div class="index_tu_content">
 				<div class="index_tu_img"><img src=""></div>
 				<div class="index_tu_info_box">
 					<div class="index_tu_info">
-						<p>未完待续的青春</p>
-						<a>3-22</a>
-						<a>白思家</a>
+						<p>{{ i.title }}</p>
+						<a>{{ i.date }}</a>
+						<a>{{ i.author }}</a>
+					</div>
+					<div class="index_tu_like">
+						<img src="../static/img/heart.png">
+						<a>{{ i.like }}</a>
 					</div>
 				</div>
 			</div>
-			<div class="index_tu_content">
-				<div class="index_tu_img"><img src=""></div>
-				<div class="index_tu_info">
-					<div class="index_tu_info">
-						<p>未完待续的青春</p>
-						<a>3-22</a>
-						<a>白思家</a>
-					</div>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
-	<div class="index_artical">
+	<div class="index_article">
 		<div class="index_title">
-			<div class="index_tag tag1">通知</div>
+			<div class="index_tag tag1">网文</div>
 			<a class="index_more">更多 ></a>
 		</div>
-		<div class="index_artical_box">
-			<div class="index_artical_content">
-				<div class="index_artical_line"></div>
+		<div class="index_article_box">
+			{% for i in article %}
+			<div class="index_article_content">
+				<div class="index_article_line">
+					<a class="index_article_title">{{ i.title }}</a>
+					<div class="index_article_info">
+						<a>{{ i.author }} ／文</a>
+						<a>{{ i.like }}</a>
+						<a>{{ i.date }}</a>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="index_artical_box">
-			<div class="index_artical_content">
-				<div class="index_artical_line"></div>
-			</div>
-		</div>
-		<div class="index_artical_box">
-			<div class="index_artical_content">
-				<div class="index_artical_line"></div>
-			</div>
-		</div>
-		<div class="index_artical_box">
-			<div class="index_artical_content">
-				<div class="index_artical_line"></div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 	<div class="index_tu">
@@ -104,36 +66,22 @@
 			<a class="index_more">更多 ></a>
 		</div>
 		<div class="index_tu_box">
-			<div class="index_tu_content">
-				<div class="index_tu_img"><img src=""></div>
-				<div class="index_tu_info">
-					<div class="index_tu_info">
-						<p>未完待续的青春</p>
-						<a>3-22</a>
-						<a>白思家</a>
-					</div>
-				</div>
-			</div>
+			{% for i in photo %}
 			<div class="index_tu_content">
 				<div class="index_tu_img"><img src=""></div>
 				<div class="index_tu_info_box">
 					<div class="index_tu_info">
-						<p>未完待续的青春</p>
-						<a>3-22</a>
-						<a>白思家</a>
+						<p>{{ i.title }}</p>
+						<a>{{ i.time }}</a>
+						<a>{{ i.author }}</a>
+					</div>
+					<div class="index_tu_like">
+						<img src="../static/img/heart.png">
+						<a>{{ i.like }}</a>
 					</div>
 				</div>
 			</div>
-			<div class="index_tu_content">
-				<div class="index_tu_img"><img src=""></div>
-				<div class="index_tu_info">
-					<div class="index_tu_info">
-						<p>未完待续的青春</p>
-						<a>3-22</a>
-						<a>白思家</a>
-					</div>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 	<div class="index_tu">
@@ -142,36 +90,22 @@
 			<a class="index_more">更多 ></a>
 		</div>
 		<div class="index_tu_box">
-			<div class="index_tu_content">
-				<div class="index_tu_img"><img src=""></div>
-				<div class="index_tu_info">
-					<div class="index_tu_info">
-						<p>未完待续的青春</p>
-						<a>3-22</a>
-						<a>白思家</a>
-					</div>
-				</div>
-			</div>
+			{% for i in comic %}
 			<div class="index_tu_content">
 				<div class="index_tu_img"><img src=""></div>
 				<div class="index_tu_info_box">
 					<div class="index_tu_info">
-						<p>未完待续的青春</p>
-						<a>3-22</a>
-						<a>白思家</a>
+						<p>{{ i.title }}</p>
+						<a>{{ i.date }}</a>
+						<a>{{ i.author }}</a>
+					</div>
+					<div class="index_tu_like">
+						<img src="../static/img/heart.png">
+						<a>{{ i.like }}</a>
 					</div>
 				</div>
 			</div>
-			<div class="index_tu_content">
-				<div class="index_tu_img"><img src=""></div>
-				<div class="index_tu_info">
-					<div class="index_tu_info">
-						<p>未完待续的青春</p>
-						<a>3-22</a>
-						<a>白思家</a>
-					</div>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 	<div class="index_tu">
@@ -180,36 +114,22 @@
 			<a class="index_more">更多 ></a>
 		</div>
 		<div class="index_tu_box">
-			<div class="index_tu_content">
-				<div class="index_tu_img"><img src=""></div>
-				<div class="index_tu_info">
-					<div class="index_tu_info">
-						<p>未完待续的青春</p>
-						<a>3-22</a>
-						<a>白思家</a>
-					</div>
-				</div>
-			</div>
+			{% for i in micromovie %}
 			<div class="index_tu_content">
 				<div class="index_tu_img"><img src=""></div>
 				<div class="index_tu_info_box">
 					<div class="index_tu_info">
-						<p>未完待续的青春</p>
-						<a>3-22</a>
-						<a>白思家</a>
+						<p>{{ i.title }}</p>
+						<a>{{ i.date }}</a>
+						<a>{{ i.author }}</a>
+					</div>
+					<div class="index_tu_like">
+						<img src="../static/img/heart.png">
+						<a>{{ i.like }}</a>
 					</div>
 				</div>
 			</div>
-			<div class="index_tu_content">
-				<div class="index_tu_img"><img src=""></div>
-				<div class="index_tu_info">
-					<div class="index_tu_info">
-						<p>未完待续的青春</p>
-						<a>3-22</a>
-						<a>白思家</a>
-					</div>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 <!-- 	<div>

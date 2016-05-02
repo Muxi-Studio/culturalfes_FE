@@ -1,8 +1,9 @@
 $d_green:#207479;
 $s_green:#33c157;
-$content_width:85%;
-$big-fonts:16px;
+$content_width:100%;
+$big-fonts:20.83px;
 $big-fontc:white;
+$font-family: "Microsoft YaHei",微软雅黑;
 .content{
 	width: $content_width;
 	height: auto;
@@ -14,12 +15,26 @@ $big-fontc:white;
 	height: 47px;
 	background-color: $d_green;
 }
+.button_list{
+	margin-left: 12px;
+}
 button{
 	background:transparent;
-	width:95px;
 	height: 47px;
 	border-style: none;
 	margin: 0px;
-	font-size: $big-fonts;
+	font: $big-fonts $font-family;
 	color:$big-fontc;
 }
+.first{
+	width: 84px;
+}
+.second{
+	width: 94px;
+}
+.third{
+	width: 146px;
+}
+
+
+
