@@ -13,9 +13,9 @@ def index():
         movie = json_dict['movie']
         article = json_dict['article']
         photo = json_dict['photo']
-        comic = json_dict['comic']
-        micromovie = json_dict['micromovie']
-    return render_template("index.html", notice=notice,movie=movie,article=article,photo=photo,comic=comic,micromovie=micromovie,)
+        animes = json_dict['animes']
+        courses = json_dict['courses']
+    return render_template("index.html", notice=notice,movie=movie,article=article,photo=photo,animes=animes,courses=courses,)
 
 @app.route("/courses")
 def courses():
