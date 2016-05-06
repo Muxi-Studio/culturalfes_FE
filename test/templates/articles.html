@@ -1,0 +1,22 @@
+{%extends 'base.html' %}
+{% block page_content %}
+		<div class="index_article">
+		<div class="index_title">
+			<div class="index_tag tag1">网文</div>
+		</div>
+		<div class="index_article_box">
+			{% for i in articles %}
+			<div class="index_article_content">
+				<div class="index_article_line">
+					<a class="index_article_title">{{ i.title }}</a>
+					<div class="index_article_info">
+						<span>{{ i.author }} ／文</span>
+						<a>{{ i.like }}</a>
+						<a>{{ i.date }}</a>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

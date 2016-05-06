@@ -29,6 +29,10 @@ $font-color:#f5f5f5 #c9c9c9 #626262;
 	@media screen and (min-width: 1096px) {
 		background-size: 100%;
 	}
+	@media screen and (max-device-width: 320px) {
+		background-size: 100%;
+		height: 400px;
+	}
 }
 .index_tag{
 	width: $tag_width;
@@ -110,15 +114,32 @@ $font-color:#f5f5f5 #c9c9c9 #626262;
 		width: 100%;
 		margin-top: $index_margin_titlctn;
 		display: block;
-		display: flex;
 		flex-direction:row;
 		display: inline-flex;
+		flex-wrap:wrap;
 		justify-content:space-between;
+		@media screen and (max-device-width:320px){
+			flex-direction:column;
+			display: flex;
+		}
+		@media screen and (max-width: 1080px){
+			flex-direction:column;
+			display: flex;			
+		}
 		.index_tu_content{
 			width: $index_item_wid;
 			height: $index_item_hei;
+			margin-bottom: 30px;
 			background-color: $index_item_bc;
 			padding: $index_content_padding;
+		@media screen and (max-device-width:320px){
+			margin-left:auto;
+			margin-right:auto;
+		}
+		@media screen and (max-width: 1200px){
+			margin-left:auto;
+			margin-right:auto;
+		}
 			.index_tu_img{
 				background-color: black;
 				display: block;
@@ -154,6 +175,10 @@ $font-color:#f5f5f5 #c9c9c9 #626262;
 					}
 				}
 			}
+		}
+		.index_blank{
+			 height: 0px;
+			 padding:0px;
 		}
 	}
 }

@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    with app.open_resource('mock/courses.json') as f:
+    with app.open_resource('mock/index.json') as f:
         data = f.read()
         json_dict = json.loads(data)
         notice = json_dict['notice']
@@ -15,16 +15,24 @@ def index():
         photo = json_dict['photo']
         animes = json_dict['animes']
         courses = json_dict['courses']
-    return render_template("index.html", notice=notice,movie=movie,article=article,photo=photo,animes=animes,courses=courses,)
+    return render_template("index.html", notice=notice,movie=movie,article=article,photo=photo,animes=animes,courses=courses)
+
+@app.route("/notices")
+def notices():
+    with app.open_resource('mock/notices.json') as f:
+        data = f.read()
+        json_dict = json.loads(data)
+        notices = json_dict['notices']
+    return render_template("notices.html", notices=notices)
 
 @app.route("/courses")
 def courses():
     with app.open_resource('mock/courses.json') as f:
         data = f.read()
         json_dict = json.loads(data)
-        info = json_dict['info']
-        hot_comments = json_dict['hot_comments']
-    return render_template("course.html", info=info, hot_comments=hot_comments)
+        courses = json_dict['courses']
+        name = json_dict['name']
+    return render_template("courses.html", courses=courses,name=name)
 
 
 @app.route("/movies/")
@@ -32,9 +40,9 @@ def movies():
     with app.open_resource('mock/movies.json') as f:
         data = f.read()
         json_dict = json.loads(data)
-        info = json_dict['info']
-
-    return render_template("movies.html", info=info, hot_comments=hot_comments)
+        movies = json_dict['movies']
+        name = json_dict['name']
+    return render_template("movies.html", movies=movies, name=name)
 
 
 @app.route("/animes/")
@@ -42,8 +50,9 @@ def animes():
     with app.open_resource('mock/animes.json') as f:
         data = f.read()
         json_dict = json.loads(data)
-        info = json_dict['info']
-    return render_template("animes.html", info=info)
+        animes = json_dict['animes']
+        name = json_dict['name']
+    return render_template("animes.html", animes=animes,name=name)
 
 
 @app.route("/photos/")
@@ -51,17 +60,17 @@ def photos():
     with app.open_resource('mock/photos.json') as f:
         data = f.read()
         json_dict = json.loads(data)
-        info = json_dict['info']
-    return render_template("photos.html", info=info)
-
+        photos = json_dict['photos']
+        name = json_dict['name']
+    return render_template("photos.html", photos=photos,name=name)
 
 @app.route("/articles")
 def articles():
     with app.open_resource('mock/articles.json') as f:
         data = f.read()
         json_dict = json.loads(data)
-        info = json_dict['info']
-    return render_template("articles.html", info=info)
+        articles = json_dict['articles']
+    return render_template("articles.html", articles=articles)
 
 
 @app.route("/photo/<int:id>/")
