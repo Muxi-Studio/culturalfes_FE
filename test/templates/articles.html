@@ -5,14 +5,14 @@
 			<div class="index_tag tag1">网文</div>
 		</div>
 		<div class="index_article_box">
-			{% for i in articles %}
+			{% for article in articles %}
 			<div class="index_article_content">
 				<div class="index_article_line">
-					<a class="index_article_title">{{ i.title }}</a>
+					<a class="index_article_title">{{ article.name }}</a>
 					<div class="index_article_info">
-						<span>{{ i.author }} ／文</span>
-						<a>{{ i.like }}</a>
-						<a>{{ i.date }}</a>
+						<span>{{ article.author_name }} ／文</span>
+						<a>{{ article.liked_count }}</a>
+						<a>{{ article.timestamp }}</a>
 					</div>
 				</div>
 			</div>

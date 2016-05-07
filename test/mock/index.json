@@ -1,109 +1,109 @@
 {
-    "notice":[{
-        "title":"华中师范大学首届网络创意文化节",
-        "date":"10.12"
+    "notices":[{
+        "name":"华中师范大学首届网络创意文化节",
+        "timestamp":"10.12"
         },{
-        "title":"华中师范大学首届网络创意",
-        "date":"10.12"
+        "name":"华中师范大学首届网络创意",
+        "timestamp":"10.12"
         },{
-        "title":"华中师范大学首届",
-        "date":"10.12"
+        "name":"华中师范大学首届",
+        "timestamp":"10.12"
         },{
-        "title":"华中师范大学",
-        "date":"10.12"
+        "name":"华中师范大学",
+        "timestamp":"10.12"
         },{
-        "title":"华中师范",
-        "date":"10.12"
+        "name":"华中师范",
+        "timestamp":"10.12"
         }],
-    "movie":[{
-        "title":"未完待续的青春",
-        "author":"白思家",
-        "date":"3-22",
-        "like":"241"
+    "movies":[{
+        "name":"未完待续的青春",
+        "author_name":"白思家",
+        "timestamp":"3-22",
+        "liked_count":"241"
         },{
-        "title":"未完待续的青春",
-        "author":"白思家",
-        "date":"3-22",
-        "like":"241"
+        "name":"未完待续的青春",
+        "author_name":"白思家",
+        "timestamp":"3-22",
+        "liked_count":"241"
         },{
-        "title":"未完待续的青春",
-        "author":"白思家",
-        "date":"3-22",
-        "like":"241"
+        "name":"未完待续的青春",
+        "author_name":"白思家",
+        "timestamp":"3-22",
+        "liked_count":"241"
         }],
-    "article":[{
-        "title":"世界那么大",
-        "author":"何欢",
-        "date":"3-22",
-        "like":"241"
+    "articles":[{
+        "name":"世界那么大",
+        "author_name":"何欢",
+        "timestamp":"3-22",
+        "liked_count":"241"
         },{
-        "title":"世界那么大",
-        "author":"何欢",
-        "date":"3-22",
-        "like":"241"
+        "name":"世界那么大",
+        "author_name":"何欢",
+        "timestamp":"3-22",
+        "liked_count":"241"
         },{
-        "title":"世界那么大",
-        "author":"何欢",
-        "date":"3-22",
-        "like":"241"
+        "name":"世界那么大",
+        "author_name":"何欢",
+        "timestamp":"3-22",
+        "liked_count":"241"
         },{
-        "title":"世界那么大",
-        "author":"何欢",
-        "date":"3-22",
-        "like":"241"
+        "name":"世界那么大",
+        "author_name":"何欢",
+        "timestamp":"3-22",
+        "liked_count":"241"
         },{
-        "title":"世界那么大",
-        "author":"何欢",
-        "date":"3-22",
-        "like":"241"
+        "name":"世界那么大",
+        "author_name":"何欢",
+        "timestamp":"3-22",
+        "liked_count":"241"
         }],
-    "photo":[{
-        "title":"未完待续的青春",
-        "author":"白思家",
-        "date":"3-22",
-        "like":"241"
+    "photos":[{
+        "name":"未完待续的青春",
+        "author_name":"白思家",
+        "timestamp":"3-22",
+        "liked_count":"241"
         },{
-        "title":"未完待续的青春",
-        "author":"白思家",
-        "date":"3-22",
-        "like":"241"
+        "name":"未完待续的青春",
+        "author_name":"白思家",
+        "timestamp":"3-22",
+        "liked_count":"241"
         },{
-        "title":"未完待续的青春",
-        "author":"白思家",
-        "date":"3-22",
-        "like":"241"
+        "name":"未完待续的青春",
+        "author_name":"白思家",
+        "timestamp":"3-22",
+        "liked_count":"241"
         }],
     "animes":[{
-        "title":"未完待续的青春",
-        "author":"白思家",
-        "date":"3-22",
-        "like":"241"
+        "name":"未完待续的青春",
+        "author_name":"白思家",
+        "timestamp":"3-22",
+        "liked_count":"241"
         },{
-        "title":"未完待续的青春",
-        "author":"白思家",
-        "date":"3-22",
-        "like":"241"
+        "name":"未完待续的青春",
+        "author_name":"白思家",
+        "timestamp":"3-22",
+        "liked_count":"241"
         },{
-        "title":"未完待续的青春",
-        "author":"白思家",
-        "date":"3-22",
-        "like":"241"
+        "name":"未完待续的青春",
+        "author_name":"白思家",
+        "timestamp":"3-22",
+        "liked_count":"241"
         }],
     "courses":[{
-        "title":"未完待续的青春",
-        "author":"白思家",
-        "date":"3-22",
-        "like":"241"
+        "name":"未完待续的青春",
+        "author_name":"白思家",
+        "timestamp":"3-22",
+        "liked_count":"241"
         },{
-        "title":"未完待续的青春",
-        "author":"白思家",
-        "date":"3-22",
-        "like":"241"
+        "name":"未完待续的青春",
+        "author_name":"白思家",
+        "timestamp":"3-22",
+        "liked_count":"241"
         },{
-        "title":"未完待续的青春",
-        "author":"白思家",
-        "date":"3-22",
-        "like":"241"
+        "name":"未完待续的青春",
+        "author_name":"白思家",
+        "timestamp":"3-22",
+        "liked_count":"241"
         }]
 }
 

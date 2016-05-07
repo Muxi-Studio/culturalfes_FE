@@ -9,13 +9,13 @@ def index():
     with app.open_resource('mock/index.json') as f:
         data = f.read()
         json_dict = json.loads(data)
-        notice = json_dict['notice']
-        movie = json_dict['movie']
-        article = json_dict['article']
-        photo = json_dict['photo']
+        notices = json_dict['notices']
+        movies = json_dict['movies']
+        articles = json_dict['articles']
+        photos = json_dict['photos']
         animes = json_dict['animes']
         courses = json_dict['courses']
-    return render_template("index.html", notice=notice,movie=movie,article=article,photo=photo,animes=animes,courses=courses)
+    return render_template("index.html", notices=notices,movies=movies,articles=articles,photos=photos,animes=animes,courses=courses)
 
 @app.route("/notices")
 def notices():
@@ -31,8 +31,7 @@ def courses():
         data = f.read()
         json_dict = json.loads(data)
         courses = json_dict['courses']
-        name = json_dict['name']
-    return render_template("courses.html", courses=courses,name=name)
+    return render_template("courses.html", courses=courses)
 
 
 @app.route("/movies/")
@@ -41,8 +40,7 @@ def movies():
         data = f.read()
         json_dict = json.loads(data)
         movies = json_dict['movies']
-        name = json_dict['name']
-    return render_template("movies.html", movies=movies, name=name)
+    return render_template("movies.html", movies=movies)
 
 
 @app.route("/animes/")
@@ -51,8 +49,7 @@ def animes():
         data = f.read()
         json_dict = json.loads(data)
         animes = json_dict['animes']
-        name = json_dict['name']
-    return render_template("animes.html", animes=animes,name=name)
+    return render_template("animes.html", animes=animes)
 
 
 @app.route("/photos/")
@@ -61,8 +58,7 @@ def photos():
         data = f.read()
         json_dict = json.loads(data)
         photos = json_dict['photos']
-        name = json_dict['name']
-    return render_template("photos.html", photos=photos,name=name)
+    return render_template("photos.html", photos=photos)
 
 @app.route("/articles")
 def articles():
