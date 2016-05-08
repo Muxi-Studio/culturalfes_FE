@@ -1,9 +1,19 @@
 	{%extends 'base.html' %}
 	{% block page_content %}
-	<div class="second-head">
-		<span class="second-head-headline"></span>
-		<span class="second-head-author"></span>
+	<div class="second_box">
+		<div class="second_head">
+			{% for i in article %}
+			<span class="second_head_title">{{ i.title }}</span>
+			<span class="second_head_author">{{ i.date }}/{{ i.author }}</span>
+			{% endfor %}
+		</div>
+		<div class="second_underline"></div>
+		<div class="second_content"><p></p></div>
 	</div>
-	<div class="second-file-show"></div>
-	<button class="second-file-vote"></button>
+	{% endblock %}
+	{% block vote_button %}
+		<div class="second_vote">
+		<div class="second_underline"></div>
+		<button class="second_vote_bt">投票</button>
+	</div>
 	{% endblock %}

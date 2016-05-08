@@ -1,23 +1,43 @@
 	{%extends 'base.html' %}
 	{% block page_content %}
-	<div class="rank-movie">
-		<div class="rank-movie-head"></div>
-		<div class="rank-movie-rank"></div>
+	<div class="rank-movie-block">
+		<div class="rank-movie-head">电影</div>
+		<div class="rank-movie-rank">
+			{% for i in rank_movie %}
+			<p><a href="{{ url_for('main.get_movie', id=movie.id) }}">{{ i.title }}</a></p>
+			{% endfor %}
+		</div>
 	</div>
-	<div class="rank-text">
-		<div class="rank-text-head"></div>
-		<div class="rank-text-rank"></div>
+	<div class="rank-text-block">
+		<div class="rank-text-head">网文</div>
+		<div class="rank-text-rank">
+			{% for i in rank_article %}
+			<p><a href="{{ url_for('main.get_movie', id=movie.id) }}">{{ i.title }}</a></p>
+			{% endfor %}
+		</div>
 	</div>
-	<div class="rank-photo">
-		<div class="rank-photo-head"></div>
-		<div class="rank-photo-rank"></div>
+	<div class="rank-photo-block">
+		<div class="rank-photo-head">摄影</div>
+		<div class="rank-photo-rank">
+			{% for i in rank_photo %}
+			<p><a href="{{ url_for('main.get_movie', id=movie.id) }}">{{ i.title }}</a></p>
+			{% endfor %}
+		</div>
 	</div>
-	<div class="rank-catoon">
-		<div class="rank-catoon-head"></div>
-		<div class="rank-catoon-rank"></div>
+	<div class="rank-catoon-block">
+		<div class="rank-catoon-head">动漫</div>
+		<div class="rank-catoon-rank">
+			{% for i in rank_comic %}
+			<p><a href="{{ url_for('main.get_movie', id=movie.id) }}">{{ i.title }}</a></p>
+			{% endfor %}
+		</div>
 	</div>
-	<div class="rank-miniclass">
-		<div class="rank-miniclass-head"></div>
-		<div class="rank-miniclass-rank"></div>
+	<div class="rank-miniclass-block">
+		<div class="rank-miniclass-head">微课程</div>
+		<div class="rank-miniclass-rank">
+			{% for i in rank_miniclass %}
+			<p><a href="{{ url_for('main.get_movie', id=movie.id) }}">{{ i.title }}</a></p>
+			{% endfor %}
+		</div>
 	</div>
 	{% endblock %}

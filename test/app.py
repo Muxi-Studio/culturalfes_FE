@@ -24,7 +24,7 @@ def courses():
         json_dict = json.loads(data)
         info = json_dict['info']
         hot_comments = json_dict['hot_comments']
-    return render_template("course.html", info=info, hot_comments=hot_comments)
+    return render_template("courses.html", info=info, hot_comments=hot_comments)
 
 
 @app.route("/movies/")
@@ -107,6 +107,30 @@ def anime():
         json_dict = json.loads(data)
         info = json_dict['info']
     return render_template("anime.html", info=info)
+
+@app.route("/second")
+def second():
+     with app.open_resource('mock/article.json') as f:
+        data = f.read()
+        json_dict = json.loads(data)
+        article = json_dict['article']
+    return render_template("second.html",article=article)
+
+@app.route("/rank")
+def rank():
+    with app.open_resource('mock/rank.json') as f:
+        date = f.read()
+        json_dict = json.loads(data)
+        rank_movie = json_dict['rank_movie']
+        rank_comic = json_dict['rank_comic']
+        rank_photo = json_dict['rank_photo']
+        rank_article = json_dict['rank_article']
+        rank_miniclass = json_dict['rank_miniclass']
+    return render_template("rank.html", rank_movie=rank_movie,rank_article=rank_article,rank_comic=rank_comic,rank_miniclass=rank_miniclass,rank_photo=rank_photo,)
+@app.route("/upload")
+
+def upload():
+    return render_template("upload.html")
 
 
 if __name__ == '__main__':

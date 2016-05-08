@@ -1,6 +1,47 @@
-.upload-main{
 
+$upload-height:35px;
+$upload-sub-bgc:#33c157;
+$upload-form-bgc:#ffffff;
+
+.upload-main{
+	margin-left: 15%;
+	margin-top: 10%;
 }
-.uplaod-author{}
-.uplaod-title{}
-.upload-class{}
+label{
+	display: inline-block;;
+	width: 100px;
+	height: $upload-height;
+	text-align: center;
+	vertical-align: middle;
+	line-height: $upload-height;
+}
+.upload-author,.upload-title,.upload-class,.upload-addfile{
+	margin-bottom: 35px;
+}
+.upload-title-form,.upload-author-form{
+	width: 508px;
+	height: $upload-height;
+	border: none;
+	outline: medium;
+	box-shadow: 1px 1px #c9c9c9;
+	background: $upload-form-bgc;
+}
+.upload-class-second{
+	margin-left: 107px;
+	line-height: $upload-height;
+}
+.upload-class-second-spe{
+	display: inline-block;
+}
+.upload-file-form{
+	width: 768px;
+	height: $upload-height;
+	background-color: $upload-form-bgc;
+}
+.upload-submite{
+	width: 189px;
+	height: $upload-height;
+	background: $upload-sub-bgc;
+	font-size: 25px;
+	color:#ffffff;
+}

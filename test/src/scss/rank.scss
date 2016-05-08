@@ -1,2 +1,25 @@
-.foo{};
-.bar{};
+$rank-width:190px;
+$rank-height:50px;
+
+.rank-main{
+	margin-top: 60px;
+	overflow: hidden;
+}
+
+.rank-movie-head,.rank-text-head,.rank-photo-head,.rank-catoon-head,.rank-miniclass-head{
+	width: $rank-width;
+	height:$rank-height;
+	box-shadow: 2px 2px 2px #cecece;
+	text-align: center;
+	font-size: 24px;
+	line-height: 50px;
+	font-weight: bold;
+	font-family: "Microsoft YaHei";
+}
+.rank-movie-block,.rank-text-block,.rank-photo-block,.rank-catoon-block,.rank-miniclass-block{
+	float: left;
+	margin-left: 60px;
+}
+.rank-movie-rank,.rank-text-rank,.rank-photo-rank,.rank-catoon-rank,.rank-miniclass-rank{
+	border-left:1px dotted #c9c9c9;
+}

@@ -1,0 +1,44 @@
+
+.second_box{
+	padding:0 10%;
+	margin-bottom: 15%;
+
+.second_head{
+	margin-top: 20px;
+	line-height: 60px;
+	}
+.second_content{
+	margin-bottom: 30px;
+	p{
+		line-height: 30px;
+	}
+}
+.second_head_title{
+	font-family: "Microsoft YaHei";
+	font-size: 36px;
+}
+.second_head_author{	
+    font-size: 25px;
+    color: #c9c9c9;
+	}
+.second_underline{
+	height: 1px;
+	width: 100%;
+	background-color: #c9c9c9;
+}
+
+.second_vote{
+	position: fixed;
+	height: 10%;
+	width: 100%;
+	bottom: 0px;
+	button{
+		width: 15%;
+		position: absolute;
+		left: 50%;
+		top: 20%;
+		margin-left: -50px;
+		color: #ffffff;
+		background-color: green;
+	}
+}
