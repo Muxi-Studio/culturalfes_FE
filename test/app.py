@@ -68,6 +68,9 @@ def articles():
         articles = json_dict['articles']
     return render_template("articles.html", articles=articles)
 
+@app.route("/second")
+def second():
+    return render_template("second.html")
 
 @app.route("/photo/<int:id>/")
 def photo():
