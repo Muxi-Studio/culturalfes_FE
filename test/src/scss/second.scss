@@ -39,6 +39,33 @@
 		top: 20%;
 		margin-left: -50px;
 		color: #ffffff;
+.second_box{
+	width:100%;
+	display: block;
+	padding-left: 107px;
+	padding-right: 107px;
+	.second_head{
+		display: block;
+		border-bottom: 1px solid silver;
+	}
+	.second_content{
+		display: block;
+		p{
+			line-height: 30px;
+		}
+	}
+}
+.second_vote{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	bottom: 0px;
+	button{
+		width: 100px;
+		height: 50px;
+		position: absolute;
+		left: 50%;
+		margin-left: -50px;
 		background-color: green;
 	}
 }
