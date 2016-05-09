@@ -15,10 +15,7 @@ $index_content_padding:11.5px;
 $index_article_linehei:47px;
 $font-size:22.92px 20.83px 18.75px 16.67px 12.92px;
 $font-color:#f5f5f5 #c9c9c9 #626262;
-.first_page{
-	background-color: $s_green;
-}
-.upload:hover,.rank:hover{
+.first_page:hover,.upload:hover,.rank:hover{
 	background-color: $s_green;
 }
 @media screen and (min-width: 1096px) {

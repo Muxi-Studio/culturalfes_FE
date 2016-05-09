@@ -70,7 +70,11 @@ def articles():
 
 @app.route("/second")
 def second():
-    return render_template("second.html")
+    with app.open_resource('mock/article.json') as f:
+        data = f.read()
+        json_dict = json.loads(data)
+        article = json_dict['article']
+    return render_template("second.html",article=article)
 
 @app.route("/photo/<int:id>/")
 def photo():
@@ -127,7 +131,7 @@ def second():
 @app.route("/rank")
 def rank():
     with app.open_resource('mock/rank.json') as f:
-        date = f.read()
+        data = f.read()
         json_dict = json.loads(data)
         rank_movie = json_dict['rank_movie']
         rank_comic = json_dict['rank_comic']
@@ -135,8 +139,8 @@ def rank():
         rank_article = json_dict['rank_article']
         rank_miniclass = json_dict['rank_miniclass']
     return render_template("rank.html", rank_movie=rank_movie,rank_article=rank_article,rank_comic=rank_comic,rank_miniclass=rank_miniclass,rank_photo=rank_photo,)
-@app.route("/upload")
 
+@app.route("/upload")
 def upload():
     return render_template("upload.html")
 
