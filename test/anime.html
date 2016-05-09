@@ -1,10 +1,10 @@
-	{%extends 'base.html' %}
+{%extends 'base.html' %}
 	{% block page_content %}
 	<div class="second_box">
 		<div class="second_head">
-			{% for i in article %}
-			<span class="second_head_title">{{ i.title }}</span>
-			<span class="second_head_author">{{ i.date }}/{{ i.author }}</span>
+			{% for anime in anime %}
+			<span class="second_head_title">{{ anime.name }}</span>
+			<span class="second_head_author">{{ anime.date }}/{{ anime.author }}</span>
 			{% endfor %}
 		</div>
 		<div class="second_underline"></div>

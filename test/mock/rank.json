@@ -1,61 +1,61 @@
 {
 	"rank_movie":[{
-        "title":"世界那么大"              
+        "name":"世界那么大"              
         },{
-        "title":"世界那么大"
+        "name":"世界那么大"
         },{
-        "title":"世界那么大"        
+        "name":"世界那么大"        
         },{
-        "title":"世界那么大"       
+        "name":"世界那么大"       
         },{
-        "title":"世界那么大"       
+        "name":"世界那么大"       
         }],
 
         "rank_article":[{
-        "title":"世界那么大"              
+        "name":"世界那么大"              
         },{
-        "title":"世界那么大"
+        "name":"世界那么大"
         },{
-        "title":"世界那么大"        
+        "name":"世界那么大"        
         },{
-        "title":"世界那么大"       
+        "name":"世界那么大"       
         },{
-        "title":"世界那么大"       
+        "name":"世界那么大"       
         }],
 
-        "rank_comic":[{
-        "title":"世界那么大"              
+        "rank_anime":[{
+        "name":"世界那么大"              
         },{
-        "title":"世界那么大"
+        "name":"世界那么大"
         },{
-        "title":"世界那么大"        
+        "name":"世界那么大"        
         },{
-        "title":"世界那么大"       
+        "name":"世界那么大"       
         },{
-        "title":"世界那么大"       
+        "name":"世界那么大"       
         }],
 
         "rank_photo":[{
-        "title":"世界那么大"              
+        "name":"世界那么大"              
         },{
-        "title":"世界那么大"
+        "name":"世界那么大"
         },{
-        "title":"世界那么大"        
+        "name":"世界那么大"        
         },{
-        "title":"世界那么大"       
+        "name":"世界那么大"       
         },{
-        "title":"世界那么大"       
+        "name":"世界那么大"       
         }],
 
-        "rank_miniclass":[{
-        "title":"世界那么大"              
+        "rank_course":[{
+        "name":"世界那么大"              
         },{
-        "title":"世界那么大"
+        "name":"世界那么大"
         },{
-        "title":"世界那么大"        
+        "name":"世界那么大"        
         },{
-        "title":"世界那么大"       
+        "name":"世界那么大"       
         },{
-        "title":"世界那么大"       
+        "name":"世界那么大"       
         }]
 }

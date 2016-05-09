@@ -68,13 +68,6 @@ def articles():
         articles = json_dict['articles']
     return render_template("articles.html", articles=articles)
 
-@app.route("/second")
-def second():
-    with app.open_resource('mock/article.json') as f:
-        data = f.read()
-        json_dict = json.loads(data)
-        article = json_dict['article']
-    return render_template("second.html",article=article)
 
 @app.route("/photo/<int:id>/")
 def photo():
@@ -120,13 +113,6 @@ def anime():
         info = json_dict['info']
     return render_template("anime.html", info=info)
 
-@app.route("/second")
-def second():
-     with app.open_resource('mock/article.json') as f:
-        data = f.read()
-        json_dict = json.loads(data)
-        article = json_dict['article']
-    return render_template("second.html",article=article)
 
 @app.route("/rank")
 def rank():
@@ -134,11 +120,11 @@ def rank():
         data = f.read()
         json_dict = json.loads(data)
         rank_movie = json_dict['rank_movie']
-        rank_comic = json_dict['rank_comic']
+        rank_anime = json_dict['rank_anime']
         rank_photo = json_dict['rank_photo']
         rank_article = json_dict['rank_article']
-        rank_miniclass = json_dict['rank_miniclass']
-    return render_template("rank.html", rank_movie=rank_movie,rank_article=rank_article,rank_comic=rank_comic,rank_miniclass=rank_miniclass,rank_photo=rank_photo,)
+        rank_course = json_dict['rank_course']
+    return render_template("rank.html", rank_movie=rank_movie,rank_article=rank_article,rank_anime=rank_anime,rank_course=rank_course,rank_photo=rank_photo,)
 
 @app.route("/upload")
 def upload():

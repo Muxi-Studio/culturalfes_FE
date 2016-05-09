@@ -1,43 +1,45 @@
 	{%extends 'base.html' %}
 	{% block page_content %}
+	<div class="rank-main">
 	<div class="rank-movie-block">
 		<div class="rank-movie-head">电影</div>
 		<div class="rank-movie-rank">
-			{% for i in rank_movie %}
-			<p><a href="">{{ i.title }}</a></p>
+			{% for rank_movie in rank_movie %}
+			<p><a href="">{{ rank_movie.name }}</a></p>
 			{% endfor %}
 		</div>
 	</div>
 	<div class="rank-text-block">
 		<div class="rank-text-head">网文</div>
 		<div class="rank-text-rank">
-			{% for i in rank_article %}
-			<p><a href="">{{ i.title }}</a></p>
+			{% for rank_article in rank_article %}
+			<p><a href="">{{ rank_article.name }}</a></p>
 			{% endfor %}
 		</div>
 	</div>
 	<div class="rank-photo-block">
 		<div class="rank-photo-head">摄影</div>
 		<div class="rank-photo-rank">
-			{% for i in rank_photo %}
-			<p><a href="">{{ i.title }}</a></p>
+			{% for rank_photo in rank_photo %}
+			<p><a href="">{{ rank_photo.name }}</a></p>
 			{% endfor %}
 		</div>
 	</div>
 	<div class="rank-catoon-block">
 		<div class="rank-catoon-head">动漫</div>
 		<div class="rank-catoon-rank">
-			{% for i in rank_comic %}
-			<p><a href="">{{ i.title }}</a></p>
+			{% for rank_anime in rank_anime %}
+			<p><a href="">{{ rank_anime.name }}</a></p>
 			{% endfor %}
 		</div>
 	</div>
 	<div class="rank-miniclass-block">
 		<div class="rank-miniclass-head">微课程</div>
 		<div class="rank-miniclass-rank">
-			{% for i in rank_miniclass %}
-			<p><a href="">{{ i.title }}</a></p>
+			{% for rank_course in rank_course %}
+			<p><a href="">{{ rank_course.name }}</a></p>
 			{% endfor %}
 		</div>
+	</div>
 	</div>
 	{% endblock %}

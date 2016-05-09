@@ -22,4 +22,10 @@ $rank-height:50px;
 }
 .rank-movie-rank,.rank-text-rank,.rank-photo-rank,.rank-catoon-rank,.rank-miniclass-rank{
 	border-left:1px dotted #c9c9c9;
+	p{
+		text-align: center;
+	}
+	a{
+		color: #000;
+	}
 }

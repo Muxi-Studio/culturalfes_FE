@@ -1,20 +1,20 @@
-
 $upload-height:35px;
 $upload-sub-bgc:#33c157;
 $upload-form-bgc:#ffffff;
 
 .upload-main{
-	margin-left: 15%;
-	margin-top: 10%;
+	margin-left: 20%;
+	margin-top: 6%;
 }
 label{
 	display: inline-block;;
-	width: 100px;
 	height: $upload-height;
 	text-align: center;
 	vertical-align: middle;
 	line-height: $upload-height;
+	.upload_label{letter-spacing: 15px;}
 }
+
 .upload-author,.upload-title,.upload-class,.upload-addfile{
 	margin-bottom: 35px;
 }
@@ -27,11 +27,14 @@ label{
 	background: $upload-form-bgc;
 }
 .upload-class-second{
-	margin-left: 107px;
+	margin-left: 87px;
 	line-height: $upload-height;
 }
 .upload-class-second-spe{
 	display: inline-block;
+}
+.upload-class-choice{
+	margin-left: 35px;
 }
 .upload-file-form{
 	width: 768px;
@@ -43,5 +46,6 @@ label{
 	height: $upload-height;
 	background: $upload-sub-bgc;
 	font-size: 25px;
+	margin-left: 25%;
 	color:#ffffff;
 }

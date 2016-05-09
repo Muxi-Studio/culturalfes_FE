@@ -24,6 +24,11 @@ body{
 	margin-left: 12px;
 }
 button{
+	outline: none;
+	border: 0;
+	cursor: pointer;
+}
+.first,.second,.third{
 	background:transparent;
 	height: 47px;
 	border-style: none;
