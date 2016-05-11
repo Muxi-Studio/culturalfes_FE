@@ -69,49 +69,57 @@ def articles():
     return render_template("articles.html", articles=articles)
 
 
-@app.route("/photo/<int:id>/")
+@app.route("/photo/")
 def photo():
     with app.open_resource('mock/photo.json') as f:
         data = f.read()
         json_dict = json.loads(data)
-        info = json_dict['info']
-    return render_template("photo.html", info=info)
+        photo = json_dict['photo']
+    return render_template("photo.html",photo=photo)
 
 
-@app.route("/course/<int:id>/")
+@app.route("/course/")
 def course():
     with app.open_resource('mock/course.json') as f:
         data = f.read()
         json_dict = json.loads(data)
-        info = json_dict['info']
-    return render_template("course.html", info=info)
+        course = json_dict['course']
+    return render_template("course.html", course=course)
 
 
-@app.route("/movie/<int:id>/")
+@app.route("/movie/")
 def movie():
     with app.open_resource('mock/movie.json') as f:
         data = f.read()
         json_dict = json.loads(data)
-        info = json_dict['info']
-    return render_template("movie.html", info=info)
+        movie = json_dict['movie']
+    return render_template("movie.html", movie=movie)
 
 
-@app.route("/article/<int:id>/")
+@app.route("/article/")
 def article():
     with app.open_resource('mock/article.json') as f:
         data = f.read()
         json_dict = json.loads(data)
-        info = json_dict['info']
-    return render_template("article.html", info=info)
+        article = json_dict['article']
+    return render_template("article.html", article=article)
 
 
-@app.route("/anime/<int:id>/")
+@app.route("/anime/")
 def anime():
     with app.open_resource('mock/anime.json') as f:
         data = f.read()
         json_dict = json.loads(data)
-        info = json_dict['info']
-    return render_template("anime.html", info=info)
+        anime = json_dict['anime']
+    return render_template("anime.html", anime=anime)
+
+@app.route("/notice/")
+def notice():
+    with app.open_resource('mock/notice.json') as f:
+        data = f.read()
+        json_dict = json.loads(data)
+        notice = json_dict['notice']
+    return render_template("notice.html", notice=notice)
 
 
 @app.route("/rank")

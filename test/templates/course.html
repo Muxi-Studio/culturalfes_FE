@@ -1,26 +1,28 @@
 {%extends 'base.html' %}
 	{% block page_content %}
 	<div class="second_box">
+	{% for course in course %}
 		<div class="second_head">
 			<span class="second_head_title">{{ course.name }}</span>
-			<span class="second_head_author">{{ course.date }}/{{ course.author }}</span>
+			<span class="second_head_author">{{ course.timestamp }}/{{ course.author_name }}</span>
 		</div>
-		<div class="second_underline"></div>
-		<div class="second_content"><p></p></div>
+	{% endfor %}
+		<div class="second_content"><video src="" controls="control"></video></div>
 	</div>
 	{% endblock %}
 	{% block vote_button %}
 		<div class="second_vote">
-		<div class="second_underline"></div>
 		<button class="second_vote_bt">投票</button>
 	</div>
 	{% endblock %}
-{% with messages = get_flashed_messages() %}
-{% if messages %}
-<ul class="submite_flash">
-	{% for message in messages %}
-	<li>{{ message }}</li>
-	{% endfor %}
-</ul>
-{% endif %}
-{% endwith %}
+	{% block flash_message %}
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		<ul class="submite_flash">
+			{% for message in messages %}
+			<li>{{ message }}</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+		{% endwith %}
+	{% endblock %}

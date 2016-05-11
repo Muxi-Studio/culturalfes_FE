@@ -3,8 +3,11 @@ $upload-sub-bgc:#33c157;
 $upload-form-bgc:#ffffff;
 
 .upload-main{
-	margin-left: 20%;
+	width: 70%;
+	margin-left:auto;
+	margin-right: auto;
 	margin-top: 6%;
+	position: relative;
 }
 label{
 	display: inline-block;;
@@ -12,8 +15,8 @@ label{
 	text-align: center;
 	vertical-align: middle;
 	line-height: $upload-height;
-	.upload_label{letter-spacing: 15px;}
 }
+.upload_label{letter-spacing: 15px;}
 
 .upload-author,.upload-title,.upload-class,.upload-addfile{
 	margin-bottom: 35px;
@@ -27,7 +30,7 @@ label{
 	background: $upload-form-bgc;
 }
 .upload-class-second{
-	margin-left: 87px;
+	margin-left: 85px;
 	line-height: $upload-height;
 }
 .upload-class-second-spe{
@@ -42,10 +45,13 @@ label{
 	background-color: $upload-form-bgc;
 }
 .upload-submite{
-	width: 189px;
+	display: block;
+	width: 190px;
+	position: absolute;
 	height: $upload-height;
 	background: $upload-sub-bgc;
 	font-size: 25px;
-	margin-left: 25%;
+	left:50%;
+	margin-left: -95px;
 	color:#ffffff;
 }

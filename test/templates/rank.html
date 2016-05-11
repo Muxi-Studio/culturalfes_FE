@@ -5,7 +5,7 @@
 		<div class="rank-movie-head">电影</div>
 		<div class="rank-movie-rank">
 			{% for rank_movie in rank_movie %}
-			<p><a href="">{{ rank_movie.name }}</a></p>
+			<div class="rank_content"><a href="">{{ rank_movie.name }}</a><span>{{ rank_movie.liked_count}}</span></div>
 			{% endfor %}
 		</div>
 	</div>
@@ -13,7 +13,7 @@
 		<div class="rank-text-head">网文</div>
 		<div class="rank-text-rank">
 			{% for rank_article in rank_article %}
-			<p><a href="">{{ rank_article.name }}</a></p>
+			<div class="rank_content"><a href="">{{ rank_article.name }}</a><span>{{ rank_article.liked_count}}</span></div>
 			{% endfor %}
 		</div>
 	</div>
@@ -21,7 +21,7 @@
 		<div class="rank-photo-head">摄影</div>
 		<div class="rank-photo-rank">
 			{% for rank_photo in rank_photo %}
-			<p><a href="">{{ rank_photo.name }}</a></p>
+			<div class="rank_content"><a href="">{{ rank_photo.name }}</a><span>{{ rank_photo.liked_count}}</span></div>
 			{% endfor %}
 		</div>
 	</div>
@@ -29,15 +29,15 @@
 		<div class="rank-catoon-head">动漫</div>
 		<div class="rank-catoon-rank">
 			{% for rank_anime in rank_anime %}
-			<p><a href="">{{ rank_anime.name }}</a></p>
+			<div class="rank_content"><a href="">{{ rank_anime.name }}</a><span>{{ rank_anime.liked_count}}</span></div>
 			{% endfor %}
 		</div>
 	</div>
-	<div class="rank-miniclass-block">
-		<div class="rank-miniclass-head">微课程</div>
-		<div class="rank-miniclass-rank">
+	<div class="rank-course-block">
+		<div class="rank-course-head">微课程</div>
+		<div class="rank-course-rank">
 			{% for rank_course in rank_course %}
-			<p><a href="">{{ rank_course.name }}</a></p>
+			<div class="rank_content"><a href="">{{ rank_course.name }}</a><span>{{ rank_course.liked_count}}</span></div>
 			{% endfor %}
 		</div>
 	</div>

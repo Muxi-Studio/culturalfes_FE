@@ -2,7 +2,7 @@ $d_green:#207479;
 $s_green:#33c157;
 $tag_width:83px;
 $tag_height:47px;
-$index_padding_h:107px;
+$index_padding_h:10%;
 $index_padding_t:25px;
 $index_padding_b:35px;
 $index_margin_titlctn:25px;
@@ -111,6 +111,12 @@ $font-color:#f5f5f5 #c9c9c9 #626262;
 					line-height: 35px;
 					font-size: nth($font-size,4);
 					color:nth($font-color,3);
+				}
+				.index_liked_count:before{
+					content:url("/static/img/heart-s.png");
+				}
+				.index_timestamp:before{
+					content:url("/static/img/time.png");
 				}
 			}
 			.index_notice_time{

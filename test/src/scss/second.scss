@@ -8,6 +8,7 @@ $underlineb-bc:#c9c9c9;
 .second_head{
 	margin-top: 20px;
 	line-height: 50px;
+	border-bottom: 1px solid $underlineb-bc;
 	}
 .second_content{
 	margin-bottom: 30px;
@@ -20,27 +21,25 @@ $underlineb-bc:#c9c9c9;
 	font-size: 36px;
 }
 .second_head_author{	
+	margin-left: 10px;
     font-size: 25px;
     color: $underlineb-bc;
 	}
-.second_underline{
-	height: 1px;
-	width: 100%;
-	background-color: $underlineb-bc;
-}
 
 .second_vote{
 	position: fixed;
-	height: 35px;
-	width: 160px;
+	height: 50px;
+	width: 80%;
 	bottom: 0;
-	padding: 0 10%;
+	margin: 0 10%;
+	border-top: 1px solid $underlineb-bc;
 	background-color: #background-color;
 	button{
+		height: 30px;
 		width: 15%;
 		position: absolute;
 		left: 50%;
-		top: 20%;
+		top: 10px;
 		margin-left: -50px;
 		background-color: #33c157;
 		color: #ffffff;

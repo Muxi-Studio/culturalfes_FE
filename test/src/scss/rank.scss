@@ -6,7 +6,7 @@ $rank-height:50px;
 	overflow: hidden;
 }
 
-.rank-movie-head,.rank-text-head,.rank-photo-head,.rank-catoon-head,.rank-miniclass-head{
+.rank-movie-head,.rank-text-head,.rank-photo-head,.rank-catoon-head,.rank-course-head{
 	width: $rank-width;
 	height:$rank-height;
 	box-shadow: 2px 2px 2px #cecece;
@@ -16,16 +16,28 @@ $rank-height:50px;
 	font-weight: bold;
 	font-family: "Microsoft YaHei";
 }
-.rank-movie-block,.rank-text-block,.rank-photo-block,.rank-catoon-block,.rank-miniclass-block{
+.rank-movie-block,.rank-text-block,.rank-photo-block,.rank-catoon-block,.rank-course-block{
 	float: left;
 	margin-left: 60px;
 }
-.rank-movie-rank,.rank-text-rank,.rank-photo-rank,.rank-catoon-rank,.rank-miniclass-rank{
+.rank-movie-rank,.rank-text-rank,.rank-photo-rank,.rank-catoon-rank,.rank-course-rank{
+	margin-left: -30px;
 	border-left:1px dotted #c9c9c9;
-	p{
-		text-align: center;
+	margin-top: 20px;
+	.rank_content{
+		height: 40px;
+		margin-left: 30px;
+		overflow: hidden;
 	}
 	a{
 		color: #000;
+		line-height: 40px;
 	}
+	span{
+		float: right;
+		line-height: 40px;
+	}
+}
+.rank-movie-rank{
+	border: none;
 }

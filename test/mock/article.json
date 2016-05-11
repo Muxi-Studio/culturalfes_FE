@@ -1,8 +1,7 @@
 {
-        "article":[{
+    "article":[{
         "name":"世界那么大",
-        "author":"何欢",
-        "date":"3-22",
-        "like":"241"
-        }]
+        "author_name":"何欢",
+        "timestamp":"3-22"
+    }]
 }
