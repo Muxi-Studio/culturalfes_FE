@@ -112,12 +112,6 @@ $font-color:#f5f5f5 #c9c9c9 #626262;
 					font-size: nth($font-size,4);
 					color:nth($font-color,3);
 				}
-				.index_liked_count:before{
-					content:url("/static/img/heart-s.png");
-				}
-				.index_timestamp:before{
-					content:url("/static/img/time.png");
-				}
 			}
 			.index_notice_time{
 				font-size: nth($font-size,4);
@@ -128,6 +122,9 @@ $font-color:#f5f5f5 #c9c9c9 #626262;
 				vertical-align: text-bottom;
 				@media screen and (max-device-width:320px){
 					display: none;
+				}
+				&:before{
+					content:url("/static/img/time.png")
 				}
 			}
 		}
@@ -239,6 +236,12 @@ $font-color:#f5f5f5 #c9c9c9 #626262;
 					@media screen and (max-device-width:320px){
 						display: none;
 					}
+						.index_liked_count:before{
+							content:url("/static/img/heart-s.png")
+						}
+						.index_timestamp:before{
+							content:url("/static/img/time.png")
+						}
 				}
 			}
 		}
