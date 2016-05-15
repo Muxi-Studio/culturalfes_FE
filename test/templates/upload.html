@@ -1,7 +1,7 @@
 	{%extends 'base.html' %}
 	{% block page_content %}
 	<div class="upload-main">
-			<form action="" method="post"> 
+		<form action="" method="post"> 
 			<div class="upload-author">
 				<label class="upload_label">作    者</label>
 				<input class="upload-author-form">
@@ -13,23 +13,23 @@
 			<div class="upload-class">
 				<label class="upload_label">类    别</label>
 				<div class="upload-class-second-spe">
-					<input name="upload-class-choice" class="upload-class-choice" type="radio" value="">电影  
-					<input name="upload-class-choice" class="upload-class-choice" type="radio" value="">网文  
+					<input name="upload-class-choice" class="upload-class-choice" type="radio" value="movie">电影  
+					<input name="upload-class-choice" class="upload-class-choice" type="radio" value="article">网文  
 				</div>
 				<div class="upload-class-second">
-					<input name="upload-class-choice" class="upload-class-choice" type="radio" value="">动漫  
-					<input name="upload-class-choice" class="upload-class-choice" type="radio" value="">摄影 
+					<input name="upload-class-choice" class="upload-class-choice" type="radio" value="anime">动漫  
+					<input name="upload-class-choice" class="upload-class-choice" type="radio" value="photo">摄影 
 				</div>
 				<div class="upload-class-second">
-					<input name="upload-class-choice" class="upload-class-choice" type="radio" value="">微课程 
+					<input name="upload-class-choice" class="upload-class-choice" type="radio" value="course">微课程 
 				</div>
 			</div>
 			<div class="upload-addfile">
 				<label>添加附件</label>
-				<input  type="file" name="upload-file" class="upload-file-form">
+				<input type="file" name="upload-file" class="upload-file-form">
 			</div>
-			<button class="upload-submite">提交</button>
+			<button type="submit" class="upload-submite">提交</button>
 		</form>
-		</div>
-		<script src="../static/js/upload.js"></script>
+	</div>
+	<script src="../static/js/upload.js"></script>
 	{% endblock %}

@@ -2,7 +2,6 @@ $background-color: #f5f5f5;
 $underlineb-bc:#c9c9c9;
 $font-size:39.58px 25px 22.92px 20.83px;
 $font-color:#f5f5f5 #c9c9c9 #626262;
-// 27.08px 19.17px 16.67px 12.5px
 .second_box{
 	padding:0 10%;
 	margin-bottom: 15%;
@@ -10,19 +9,19 @@ $font-color:#f5f5f5 #c9c9c9 #626262;
 
 .second_head{
 	display: block;
-	margin-top: 20px;
+	margin-top: 50px;
 	line-height: 50px;
 	border-bottom: 1px solid $underlineb-bc;
 	}
 .second_content{
 	display: block;
-	margin-top: 50px;
+	margin-top: 30px;
 	margin-bottom: 50px;
 	text-align: center;
 	p{	
 		text-align: left;
 		line-height: 50px;
-		font-size:nth($font-size,3);
+		font-size:nth($font-size,4);
 		font-family: "Microsoft YaHei";
 		color: nth($font-color,3);
 	}

@@ -1,8 +1,15 @@
-from flask import Flask, render_template
-import json
+#-*- coding: utf-8 -*-
+from flask import Flask, render_template, request, session
+import json, random
+from geetest import GeetestLib
+
+captcha_id = "b46d1900d0a894591916ea94ea91bd2c"
+private_key = "36fc3fe98530eea08dfc6ce76e3d24c4"
+user_id = random.randint(1,100) 
 
 app = Flask(__name__)
 
+app.config['SECRET_KEY'] = 'a hard to guess string'
 
 @app.route("/")
 def index():
@@ -134,9 +141,40 @@ def rank():
         rank_course = json_dict['rank_course']
     return render_template("rank.html", rank_movie=rank_movie,rank_article=rank_article,rank_anime=rank_anime,rank_course=rank_course,rank_photo=rank_photo,)
 
-@app.route("/upload")
+@app.route("/upload/", methods=["POST", "GET"])
 def upload():
     return render_template("upload.html")
+
+@app.route('/getcaptcha/', methods=["GET"])
+def get_captcha():
+    user_id = random.randint(1,100)
+    gt =  GeetestLib(captcha_id, private_key)
+    status = gt.pre_process(user_id)
+    session[gt.GT_STATUS_SESSION_KEY] = status
+    session["user_id"] = user_id
+    response_str = gt.get_response_str()
+    return response_str
+
+
+@app.route('/validate', methods=["POST"])
+def validate_capthca():
+    gt = GeetestLib(captcha_id, private_key)
+    challenge = request.form[gt.FN_CHALLENGE]
+    validate = request.form[gt.FN_VALIDATE]
+    seccode = request.form[gt.FN_SECCODE]
+    status = session[gt.GT_STATUS_SESSION_KEY]
+    user_id = session["user_id"]
+    if status:
+        result = gt.success_validate(challenge, validate, seccode, user_id)
+    else:
+        result = gt.failback_validate(challenge, validate, seccode)
+    result = "success" if result else "fail"
+    if result == "success":
+        return redirect(url_for("index"))
+    else:
+        flash("验证码错误!")
+        return redirect(url_for("captcha"))
+
 
 
 if __name__ == '__main__':
